@@ -17,6 +17,7 @@ public sealed class OrdersDbContext: DbContext
         order.Property(x=>x.Sequence).ValueGeneratedOnAdd();
         order.HasIndex(o => o.Id).IsUnique();
         order.HasIndex(o => o.UserId);
+        // order.HasIndex(o => new { o.UserId, o.ShopId });
         order.HasIndex(o => o.ShopId);
         order.Property(o => o.Status).HasConversion<string>();
         order.HasIndex(o => o.Status);
