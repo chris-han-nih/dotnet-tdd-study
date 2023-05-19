@@ -16,4 +16,5 @@ public class Order
     public DateTime? StartedAtUtc { get; set; }
     public DateTime? PaidAtUtc { get; set; }
     public DateTime? ShippedAtUtc { get; set; }
+    public DateTime? CancelledAtUtc { get; set; }
 }
