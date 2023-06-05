@@ -17,4 +17,22 @@ public sealed class OrdersController: ControllerBase
                             .AsNoTracking()
                             .ToListAsync();
     }
+    
+    // [Route("{id}")]
+    // [HttpGet]
+    // [Produces("application/json", Type = typeof(Order))]
+    // [ProducesResponseType(404)]
+    // public async Task<IActionResult> GetOrder(
+    //     Guid id,
+    //     [FromServices] OrdersDbContext context)
+    // {
+    //     var order = await context.Orders
+    //                               .AsNoTracking()
+    //                               .SingleOrDefaultAsync(o => o.Id == id);
+    //     if (order == null)
+    //     {
+    //         return NotFound();
+    //     }
+    //     return Ok(order);
+    // }
 }
